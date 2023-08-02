@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #252525; -fx-hgap: 20px;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ClientMenu">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" prefHeight="76.0" prefWidth="257.0" text="connect 4 client: menu" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" contentDisplay="CENTER" fx:id="joinBtn" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 31;" text="join" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" fx:id="yourC" GridPane.rowIndex="3">
+         <children>
+            <Label text="Your Color" fx:id="yourColorLabel" textFill="BLACK">
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+             <ComboBox prefWidth="150.0" fx:id="yourColor">
+                 <items>
+                     <FXCollections fx:factory="observableArrayList">
+                         <String fx:value="red" />
+                         <String fx:value="orange"/>
+                         <String fx:value="yellow"/>
+                     </FXCollections>
+                 </items>
+                 <value>
+                     <String fx:value="red"/>
+                 </value>
+             </ComboBox>
+         </children>
+      </HBox>
+      <TextField alignment="CENTER" promptText="enter ip address..." fx:id="ipAdd" style="-fx-background-color: #464646; -fx-background-radius: 32; -fx-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" promptText="enter port number..." fx:id="portNum" style="-fx-background-color: #464646; -fx-background-radius: 32; -fx-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" fx:id="oppC" GridPane.rowIndex="4">
+         <children>
+            <Label text="Opp. Color" fx:id="oppColorLabel" textFill="BLACK">
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+             <ComboBox prefWidth="150.0" fx:id="oppColor">
+                 <items>
+                     <FXCollections fx:factory="observableArrayList">
+                         <String fx:value="green" />
+                         <String fx:value="blue"/>
+                         <String fx:value="purple"/>
+                     </FXCollections>
+                 </items>
+                 <value>
+                     <String fx:value="green"/>
+                 </value>
+             </ComboBox>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" prefHeight="76.0" prefWidth="257.0" text="choose colors and click join" textFill="#bfbfbf" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" fx:id="subtitle">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>
